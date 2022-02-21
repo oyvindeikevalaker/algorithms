@@ -16,8 +16,8 @@ public class TextSearchBruteForce implements TextSearch {
     }
 
     @Override
-    public int findFirst(String text) throws IllegalStateException{
-        if(defaultToken == null){
+    public int findFirst(String text) throws IllegalStateException {
+        if (defaultToken == null) {
             throw new IllegalStateException("No default target specified");
         }
 
@@ -37,7 +37,8 @@ public class TextSearchBruteForce implements TextSearch {
         }
 
         //check each position in text as starting point for target
-        outer: for (int i = 0; i < text.length(); i++) {
+        outer:
+        for (int i = 0; i < text.length(); i++) {
 
             //check chars of target based on current starting point in text
             for (int j = 0; j < target.length(); j++) {
